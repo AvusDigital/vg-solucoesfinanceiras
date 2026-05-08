@@ -1,447 +1,492 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="VG Soluções Financeiras: consultoria pessoal premium em consórcio estruturado para carro, imóvel e investimentos." />
-  <title>VG Soluções Financeiras | Especialista em Consórcio Estruturado</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-  <script>
-    window.tailwind = {
-      config: {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "system-ui", "sans-serif"]
-            },
-            colors: {
-              blacksoft: "#0a0a0a",
-              gold: "#C9A24A",
-              champagne: "#F4DE9B",
-              graphite: "#151515"
-            },
-            boxShadow: {
-              gold: "0 22px 70px rgba(201, 162, 74, 0.22)",
-              deep: "0 28px 90px rgba(0, 0, 0, 0.48)"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VG Soluções Financeiras | Consórcio Estruturado</title>
+    <meta name="description"
+        content="Vitória Gomes, especialista em consórcio estruturado para veículos, imóveis e investimento patrimonial." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { colors: { blackpremium: '#0a0a0a', gold: '#C9A24A', goldsoft: '#E3C76A' }, fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }, boxShadow: { glow: '0 0 80px rgba(201, 162, 74, 0.24)', premium: '0 24px 80px rgba(0, 0, 0, 0.45)' } } } }; </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            background: #0a0a0a;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
             }
-          }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-      }
-    };
-  </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    :root {
-      color-scheme: dark;
-      --gold: #C9A24A;
-      --black: #0a0a0a;
-    }
 
-    * {
-      box-sizing: border-box;
-    }
+        @keyframes floatSoft {
 
-    body {
-      margin: 0;
-      font-family: "Inter", system-ui, sans-serif;
-      background: #0a0a0a;
-      color: #f7f2e8;
-      letter-spacing: 0;
-    }
+            0%,
+            100% {
+                transform: translateY(0);
+            }
 
-    .page-glow {
-      background:
-        radial-gradient(circle at 82% 8%, rgba(201, 162, 74, 0.2), transparent 30rem),
-        radial-gradient(circle at 10% 42%, rgba(201, 162, 74, 0.09), transparent 24rem),
-        #0a0a0a;
-    }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
 
-    .gold-gradient {
-      background: linear-gradient(135deg, #F4DE9B 0%, #C9A24A 45%, #8A6823 100%);
-    }
+        .fade-up {
+            animation: fadeUp .8s ease-out both;
+        }
 
-    .gold-text {
-      background: linear-gradient(135deg, #F8E7AE, #C9A24A 58%, #A77F2F);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .soft-card {
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.035));
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.32);
-    }
-
-    .gold-border {
-      border: 1px solid rgba(201, 162, 74, 0.34);
-    }
-
-    .image-sheen::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 45%, rgba(10, 10, 10, 0.86) 100%);
-      pointer-events: none;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 700ms ease, transform 700ms ease;
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .button-shine {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .button-shine::after {
-      content: "";
-      position: absolute;
-      top: -70%;
-      bottom: -70%;
-      left: -55%;
-      width: 42%;
-      transform: rotate(18deg);
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-      transition: left 780ms ease;
-    }
-
-    .button-shine:hover::after {
-      left: 120%;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .reveal,
-      .button-shine::after {
-        transition: none;
-      }
-    }
-  </style>
+        .float-soft {
+            animation: floatSoft 5s ease-in-out infinite;
+        }
+    </style>
 </head>
-<body class="page-glow min-h-screen overflow-x-hidden antialiased">
-  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-blacksoft/80 backdrop-blur-xl">
-    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-10">
-      <a href="#inicio" class="flex items-center gap-3" aria-label="VG Soluções Financeiras">
-        <img src="assets/logo.png" alt="VG" class="h-6 w-auto">
-        <span class="text-sm font-semibold text-stone-100 sm:text-base">VG Soluções Financeiras</span>
-      </a>
 
-      <nav class="hidden items-center gap-7 text-sm font-medium text-stone-300 md:flex" aria-label="Navegação principal">
-        <a href="#sobre" class="transition hover:text-champagne">Sobre</a>
-        <a href="#resultados" class="transition hover:text-champagne">Resultados</a>
-        <a href="#servicos" class="transition hover:text-champagne">Soluções</a>
-      </nav>
+<body class="bg-blackpremium text-white antialiased selection:bg-gold selection:text-black">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-blackpremium/85 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8"> <a href="#inicio"
+                class="flex items-center gap-3"> <span
+                    class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-sm font-bold text-gold">VG</span>
+                <span class="text-sm font-semibold tracking-wide text-white">VG Soluções Financeiras</span> </a>
+            <nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex">
+                <a href="#sobre" class="transition hover:text-gold">Sobre</a>
+                <a href="#servicos" class="transition hover:text-gold">Soluções</a>
+                <a href="#resultados" class="transition hover:text-gold">Resultados</a>
+                <a href="#faq" class="transition hover:text-gold">Dúvidas</a>
+            </nav>
 
-      <a href="#" data-whatsapp-link data-source="Menu" class="hidden items-center gap-2 rounded-sm border border-gold/40 px-4 py-2 text-sm font-bold text-champagne transition hover:bg-gold hover:text-black md:inline-flex">
-        <i data-lucide="message-circle" class="h-4 w-4"></i>
-        WhatsApp
-      </a>
-    </div>
-  </header>
-
-  <main>
-    <section id="inicio" class="relative isolate min-h-screen overflow-hidden bg-[#0a0a0a] pt-24">
-      <div class="pointer-events-none absolute right-[-10rem] top-20 h-[34rem] w-[34rem] rounded-full bg-[#C9A24A]/20 blur-[120px]"></div>
-      <div class="pointer-events-none absolute left-0 top-0 h-80 w-80 rounded-full bg-[#C9A24A]/10 blur-[110px]"></div>
-
-      <div class="relative mx-auto grid min-h-[calc(100vh-6rem)] max-w-6xl items-center gap-12 px-5 pb-16 sm:px-8 lg:grid-cols-2 lg:px-10">
-        <div class="reveal order-2 max-w-2xl text-center lg:order-1 lg:text-left">
-          <p class="text-sm font-bold uppercase tracking-[0.22em] text-[#C9A24A]">
-            Consultoria pessoal em consórcios
-          </p>
-
-          <h1 class="mt-5 text-4xl font-extrabold leading-[1.02] text-stone-50 sm:text-5xl lg:text-7xl">
-            Olá, eu sou a <span class="gold-text">Vitória Gomes</span>
-          </h1>
-
-          <p class="mt-6 text-lg leading-8 text-stone-300 sm:text-xl">
-            Especialista em consórcio estruturado. Vou te ajudar a conquistar seu carro, imóvel ou investimento com estratégia e segurança.
-          </p>
-
-          <div class="mt-9 flex justify-center lg:justify-start">
-            <a href="#" data-whatsapp-link data-source="Hero" class="button-shine gold-gradient inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl px-7 py-4 text-base font-extrabold text-black shadow-gold transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-black sm:w-auto">
-              <i data-lucide="message-circle" class="h-5 w-5"></i>
-              Falar com especialista no WhatsApp
+            <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20entender%20qual%20cons%C3%B3rcio%20faz%20sentido%20para%20meu%20objetivo."
+                class="hidden rounded-full bg-gold px-5 py-3 text-sm font-bold text-black transition hover:bg-goldsoft md:inline-flex">
+                WhatsApp
             </a>
-          </div>
         </div>
+    </header>
+    <main>
+        <section id="inicio" class="relative h-screen w-full flex items-center bg-black overflow-hidden">
 
-        <div class="reveal order-1 flex justify-center lg:order-2 lg:justify-end">
-          <div class="relative w-full max-w-[25rem] sm:max-w-[30rem] lg:max-w-[32rem]">
-            <div class="pointer-events-none absolute -inset-8 rounded-full bg-[#C9A24A]/25 blur-3xl"></div>
-            <img src="assets/consultant-hero.png" alt="Vitória Gomes, especialista em consórcio estruturado" class="relative z-10 ml-auto w-full rounded-[2rem] object-cover object-[58%_center] shadow-2xl lg:translate-x-4" />
-          </div>
-        </div>
-      </div>
-    </section>
+            <!-- CONTEÚDO ESQUERDA -->
+            <div class="relative z-10 w-full pl-10 md:pl-24">
 
-    <section id="sobre" class="border-y border-white/10 bg-[#0d0d0d] py-20 sm:py-24">
-      <div class="mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
-        <div class="reveal relative overflow-hidden rounded-sm border border-white/10 shadow-deep">
-          <img src="assets/consultant-about.png" alt="Consultora da VG em atendimento personalizado" class="h-[25rem] w-full object-cover sm:h-[34rem]" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-        </div>
+                <div class="flex items-start gap-3 md:gap-4">
 
-        <div class="reveal">
-          <p class="text-sm font-bold uppercase tracking-[0.22em] text-champagne">Sobre a consultoria</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight text-stone-50 sm:text-5xl">
-            Uma especialista ao seu lado para decidir com clareza.
-          </h2>
-          <div class="mt-6 space-y-5 text-base leading-8 text-stone-300 sm:text-lg">
-            <p>
-              Meu trabalho é entender o que você quer conquistar e transformar esse objetivo em um plano de consórcio simples, seguro e estratégico.
-            </p>
-            <p>
-              Antes de falar em parcela ou prazo, eu analiso seu momento financeiro, seu perfil e a melhor forma de usar o consórcio a favor do seu patrimônio.
-            </p>
-          </div>
+                    <!-- LOGO -->
+                    <img src="assets/images/logo.png" class="h-32 md:h-40 w-auto mt-2">
 
-          <div class="mt-8 grid gap-3 sm:grid-cols-2">
-            <div class="soft-card rounded-sm p-5">
-              <i data-lucide="heart-handshake" class="h-6 w-6 text-champagne"></i>
-              <p class="mt-4 font-bold text-stone-100">Atendimento humano</p>
-              <p class="mt-2 text-sm leading-6 text-stone-400">Sem pressão. Sem proposta pronta. Primeiro, entendimento.</p>
-            </div>
-            <div class="soft-card rounded-sm p-5">
-              <i data-lucide="shield-check" class="h-6 w-6 text-champagne"></i>
-              <p class="mt-4 font-bold text-stone-100">Decisão orientada</p>
-              <p class="mt-2 text-sm leading-6 text-stone-400">Você sabe por que cada escolha faz sentido para seu objetivo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <!-- BARRA -->
+                    <div class="h-28 md:h-32 w-[2px] bg-white/30"></div>
 
-    <section id="resultados" class="py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="reveal max-w-3xl">
-          <p class="text-sm font-bold uppercase tracking-[0.22em] text-champagne">Resultados e confiança</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight text-stone-50 sm:text-5xl">
-            O consórcio certo aproxima você da conquista.
-          </h2>
-          <p class="mt-5 max-w-2xl leading-8 text-stone-400">
-            Mais do que contratar uma cota, você recebe orientação para construir um caminho realista até a contemplação.
-          </p>
-        </div>
+                    <!-- TEXTO -->
+                    <div>
+                        <h1 class="text-6xl md:text-7xl font-light text-white leading-tight">
+                            Vitória
+                        </h1>
 
-        <div class="mt-10 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
-          <div class="reveal image-sheen relative min-h-[28rem] overflow-hidden rounded-sm border border-white/10 shadow-deep">
-            <img src="assets/client-success.png" alt="Clientes felizes recebendo orientação e chave do veículo" class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-8">
-              <p class="max-w-2xl text-2xl font-extrabold leading-tight text-white sm:text-4xl">
-                "A sensação de conquistar com planejamento muda tudo."
-              </p>
-              <p class="mt-4 max-w-xl leading-7 text-stone-300">
-                Cliente orientado entende o plano, acompanha o processo e toma decisões com mais tranquilidade.
-              </p>
-            </div>
-          </div>
+                        <h1 class="text-6xl md:text-7xl font-semibold text-gold leading-tight">
+                            Gomes
+                        </h1>
 
-          <div class="grid gap-5">
-            <div class="reveal soft-card rounded-sm p-6">
-              <div class="flex items-center gap-1 text-champagne" aria-label="5 estrelas">
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-              </div>
-              <blockquote class="mt-5 leading-7 text-stone-300">
-                "Eu não sabia por onde começar. A consultoria organizou tudo e me mostrou um plano possível para trocar de carro."
-              </blockquote>
-              <p class="mt-5 text-sm font-bold text-stone-100">Mariana, consórcio de veículo</p>
+                        <p class="mt-4 text-sm tracking-[0.4em] uppercase text-white/50">
+                            Consultora Financeira
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="reveal soft-card rounded-sm p-6">
-              <div class="flex items-center gap-1 text-champagne" aria-label="5 estrelas">
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-                <i data-lucide="star" class="h-4 w-4 fill-current"></i>
-              </div>
-              <blockquote class="mt-5 leading-7 text-stone-300">
-                "O atendimento foi direto, humano e sem enrolação. Entendi o prazo, a estratégia e o melhor valor para o meu imóvel."
-              </blockquote>
-              <p class="mt-5 text-sm font-bold text-stone-100">Rafael, consórcio imobiliário</p>
             </div>
-          </div>
+
+            <!-- IMAGEM DIREITA (SEM DEGRADE, CORTE LIMPO) -->
+            <div class="absolute right-0 bottom-0 h-full w-[50%] flex items-end justify-end">
+
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
+                    class="h-full object-contain" />
+
+            </div>
+
+        </section>
+
+        <section id="sobre" class="border-y border-white/10 bg-white/[0.02] py-20 md:py-28">
+            <div class="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[.82fr_1.18fr] lg:gap-16">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Sobre a consultora</p>
+                    <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                        Planejamento claro para decisões financeiras melhores.
+                    </h2>
+                </div>
+
+                <div class="space-y-6 text-base leading-8 text-white/70 md:text-lg">
+                    <p>
+                        A VG Soluções Financeiras nasceu para transformar o consórcio em uma decisão estratégica, sem
+                        pressão e sem promessas vazias. A Vitória conduz cada atendimento com escuta, análise e
+                        orientação prática para que o cliente entenda o melhor caminho antes de assumir qualquer
+                        compromisso.
+                    </p>
+                    <p>
+                        O foco está em construir patrimônio com segurança: escolher a carta certa, avaliar prazos,
+                        entender possibilidades de contemplação e estruturar um plano compatível com a realidade
+                        financeira de cada pessoa.
+                    </p>
+
+                    <div class="grid gap-4 pt-3 sm:grid-cols-3">
+                        <div class="rounded-2xl border border-white/10 bg-black/40 p-5">
+                            <p class="text-sm font-bold text-gold">Estratégia</p>
+                            <p class="mt-2 text-sm leading-6 text-white/58">Plano alinhado ao seu objetivo.</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-black/40 p-5">
+                            <p class="text-sm font-bold text-gold">Segurança</p>
+                            <p class="mt-2 text-sm leading-6 text-white/58">Orientação transparente em cada etapa.</p>
+                        </div>
+                        <div class="rounded-2xl border border-white/10 bg-black/40 p-5">
+                            <p class="text-sm font-bold text-gold">Acompanhamento</p>
+                            <p class="mt-2 text-sm leading-6 text-white/58">Suporte antes, durante e após a contratação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Soluções</p>
+                    <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                        Consórcio para cada momento da sua vida.
+                    </h2>
+                    <p class="mt-5 text-base leading-8 text-white/65 md:text-lg">
+                        Escolha a modalidade ideal e receba uma análise personalizada pelo WhatsApp.
+                    </p>
+                </div>
+
+                <div class="mt-14 grid gap-5 md:grid-cols-3">
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=85"
+                            alt="Consórcio de veículos"
+                            class="h-56 w-full object-cover opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
+                        <div class="p-6">
+                            <h3 class="text-2xl font-extrabold text-white">Veículos</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/62">Carro, moto, caminhonete ou veículo para
+                                trabalho com planejamento e parcelas previsíveis.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20simular%20um%20cons%C3%B3rcio%20de%20ve%C3%ADculo."
+                                class="mt-6 inline-flex text-sm font-bold text-gold transition hover:text-goldsoft">Simular
+                                veículo →</a>
+                        </div>
+                    </article>
+
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=85"
+                            alt="Consórcio imobiliário"
+                            class="h-56 w-full object-cover opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
+                        <div class="p-6">
+                            <h3 class="text-2xl font-extrabold text-white">Imóveis</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/62">Casa, apartamento, terreno, construção ou
+                                reforma com uma rota financeira mais organizada.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20simular%20um%20cons%C3%B3rcio%20de%20im%C3%B3vel."
+                                class="mt-6 inline-flex text-sm font-bold text-gold transition hover:text-goldsoft">Simular
+                                imóvel →</a>
+                        </div>
+                    </article>
+
+                    <article class="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+                        <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=900&q=85"
+                            alt="Consórcio como investimento"
+                            class="h-56 w-full object-cover opacity-85 transition duration-500 group-hover:scale-105 group-hover:opacity-100" />
+                        <div class="p-6">
+                            <h3 class="text-2xl font-extrabold text-white">Investimento</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/62">Estratégia para formação de patrimônio,
+                                carta de crédito e oportunidades de crescimento.</p>
+                            <a href="https://wa.me/5500000000000?text=Quero%20entender%20cons%C3%B3rcio%20como%20investimento."
+                                class="mt-6 inline-flex text-sm font-bold text-gold transition hover:text-goldsoft">Falar
+                                sobre investimento →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative overflow-hidden border-y border-white/10 bg-white/[0.02] py-20 md:py-28">
+            <div class="absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl"></div>
+
+            <div class="relative mx-auto max-w-7xl px-5 md:px-8">
+                <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Benefícios</p>
+                        <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                            Menos improviso. Mais clareza para conquistar.
+                        </h2>
+                        <p class="mt-5 text-base leading-8 text-white/65 md:text-lg">
+                            O consórcio certo combina objetivo, prazo, capacidade de pagamento e estratégia de
+                            contemplação.
+                        </p>
+                        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20uma%20an%C3%A1lise%20personalizada."
+                            class="mt-8 inline-flex rounded-full bg-gold px-7 py-4 text-sm font-extrabold text-black shadow-glow transition hover:bg-goldsoft">
+                            Quero minha análise
+                        </a>
+                    </div>
+
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div class="rounded-3xl border border-white/10 bg-black/45 p-6">
+                            <div
+                                class="mb-5 h-10 w-10 rounded-full bg-gold/15 text-center text-2xl leading-10 text-gold">
+                                ✓</div>
+                            <h3 class="text-lg font-bold text-white">Sem juros de financiamento</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/60">Uma alternativa planejada para comprar com
+                                mais controle sobre o custo total.</p>
+                        </div>
+
+                        <div class="rounded-3xl border border-white/10 bg-black/45 p-6">
+                            <div
+                                class="mb-5 h-10 w-10 rounded-full bg-gold/15 text-center text-2xl leading-10 text-gold">
+                                ✓</div>
+                            <h3 class="text-lg font-bold text-white">Parcelas sob medida</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/60">Simulação considerando sua renda, objetivo e
+                                momento financeiro.</p>
+                        </div>
+
+                        <div class="rounded-3xl border border-white/10 bg-black/45 p-6">
+                            <div
+                                class="mb-5 h-10 w-10 rounded-full bg-gold/15 text-center text-2xl leading-10 text-gold">
+                                ✓</div>
+                            <h3 class="text-lg font-bold text-white">Estratégia de lance</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/60">Orientação para entender possibilidades
+                                reais de antecipação.</p>
+                        </div>
+
+                        <div class="rounded-3xl border border-white/10 bg-black/45 p-6">
+                            <div
+                                class="mb-5 h-10 w-10 rounded-full bg-gold/15 text-center text-2xl leading-10 text-gold">
+                                ✓</div>
+                            <h3 class="text-lg font-bold text-white">Acompanhamento humano</h3>
+                            <p class="mt-3 text-sm leading-7 text-white/60">Atendimento próximo, explicações simples e
+                                suporte no WhatsApp.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultados" class="py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="mx-auto max-w-3xl text-center">
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Resultados</p>
+                    <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                        Clientes que saem da dúvida para um plano de conquista.
+                    </h2>
+                </div>
+
+                <div class="mt-14 grid gap-5 md:grid-cols-4">
+                    <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7 text-center">
+                        <p class="text-4xl font-extrabold text-gold">+120</p>
+                        <p class="mt-3 text-sm leading-6 text-white/60">simulações estratégicas realizadas</p>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7 text-center">
+                        <p class="text-4xl font-extrabold text-gold">R$ 8M+</p>
+                        <p class="mt-3 text-sm leading-6 text-white/60">em cartas analisadas com clientes</p>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7 text-center">
+                        <p class="text-4xl font-extrabold text-gold">24h</p>
+                        <p class="mt-3 text-sm leading-6 text-white/60">tempo médio para retorno inicial</p>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7 text-center">
+                        <p class="text-4xl font-extrabold text-gold">1:1</p>
+                        <p class="mt-3 text-sm leading-6 text-white/60">consultoria personalizada no WhatsApp</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 rounded-3xl border border-gold/25 bg-gold/10 p-6 text-center md:p-8">
+                    <p class="text-lg font-semibold leading-8 text-white">
+                        A escolha mais importante não é apenas entrar em um consórcio. É entrar no consórcio certo, com
+                        estratégia, transparência e acompanhamento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="border-y border-white/10 bg-white/[0.02] py-20 md:py-28">
+            <div class="mx-auto max-w-7xl px-5 md:px-8">
+                <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+                    <div>
+                        <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Depoimentos</p>
+                        <h2 class="mt-4 max-w-2xl text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                            O que clientes dizem sobre a experiência.
+                        </h2>
+                    </div>
+                    <a href="https://wa.me/5500000000000?text=Quero%20falar%20com%20a%20Vit%C3%B3ria%20sobre%20meu%20cons%C3%B3rcio."
+                        class="inline-flex rounded-full border border-gold/40 px-6 py-3 text-sm font-bold text-gold transition hover:bg-gold hover:text-black">
+                        Conversar agora
+                    </a>
+                </div>
+
+                <div class="mt-12 grid gap-5 md:grid-cols-3">
+                    <figure class="rounded-3xl border border-white/10 bg-black/45 p-7">
+                        <div class="mb-5 flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-gold">
+                                RM</div>
+                            <div>
+                                <p class="font-bold text-white">Rafael M.</p>
+                                <p class="text-xs text-white/45">Consórcio de veículo</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-sm leading-7 text-white/65">
+                            “Eu já tinha pesquisado bastante, mas só entendi qual plano fazia sentido depois da análise.
+                            O atendimento foi direto, claro e sem pressão.”
+                        </blockquote>
+                    </figure>
+
+                    <figure class="rounded-3xl border border-white/10 bg-black/45 p-7">
+                        <div class="mb-5 flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-gold">
+                                AC</div>
+                            <div>
+                                <p class="font-bold text-white">Ana C.</p>
+                                <p class="text-xs text-white/45">Consórcio imobiliário</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-sm leading-7 text-white/65">
+                            “A Vitória explicou as possibilidades com muita paciência. Saí da conversa sabendo
+                            exatamente os próximos passos para comprar meu imóvel.”
+                        </blockquote>
+                    </figure>
+
+                    <figure class="rounded-3xl border border-white/10 bg-black/45 p-7">
+                        <div class="mb-5 flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-gold/15 font-bold text-gold">
+                                LS</div>
+                            <div>
+                                <p class="font-bold text-white">Lucas S.</p>
+                                <p class="text-xs text-white/45">Investimento patrimonial</p>
+                            </div>
+                        </div>
+                        <blockquote class="text-sm leading-7 text-white/65">
+                            “Gostei porque não foi uma venda genérica. Ela entendeu meu objetivo e mostrou cenários
+                            antes de falar de contratação.”
+                        </blockquote>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-20 md:py-28">
+            <div class="mx-auto grid max-w-7xl gap-10 px-5 md:px-8 lg:grid-cols-[.86fr_1.14fr] lg:gap-16">
+                <div>
+                    <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">FAQ</p>
+                    <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
+                        Dúvidas frequentes antes da simulação.
+                    </h2>
+                    <p class="mt-5 text-base leading-8 text-white/65">
+                        Se quiser uma resposta para o seu caso específico, chame no WhatsApp e receba uma orientação
+                        personalizada.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-white">
+                            Consórcio tem juros?
+                            <span class="text-gold transition group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm leading-7 text-white/62">
+                            O consórcio não tem juros como um financiamento tradicional. Existem taxas administrativas e
+                            custos previstos em contrato, que devem ser analisados antes da contratação.
+                        </p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-white">
+                            Posso usar consórcio para investimento?
+                            <span class="text-gold transition group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm leading-7 text-white/62">
+                            Sim. Dependendo do objetivo, carta de crédito, prazo e estratégia, o consórcio pode fazer
+                            parte de um plano de construção patrimonial.
+                        </p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-white">
+                            A contemplação é garantida?
+                            <span class="text-gold transition group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm leading-7 text-white/62">
+                            A contemplação acontece por sorteio ou lance, conforme as regras do grupo. A consultoria
+                            ajuda você a entender cenários e estratégias possíveis, sem promessas irreais.
+                        </p>
+                    </details>
+
+                    <details class="group rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+                        <summary
+                            class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-white">
+                            Como funciona o atendimento?
+                            <span class="text-gold transition group-open:rotate-45">+</span>
+                        </summary>
+                        <p class="mt-4 text-sm leading-7 text-white/62">
+                            Você chama no WhatsApp, informa seu objetivo e recebe uma primeira análise. Depois, a
+                            Vitória apresenta alternativas e orienta os próximos passos.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="relative overflow-hidden border-y border-gold/20 bg-gold/10 py-20 md:py-28">
+            <div class="absolute inset-x-0 top-0 mx-auto h-72 max-w-4xl rounded-full bg-gold/20 blur-3xl"></div>
+
+            <div class="relative mx-auto max-w-4xl px-5 text-center md:px-8">
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-gold">Próximo passo</p>
+                <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-6xl">
+                    Vamos estruturar o seu plano de conquista?
+                </h2>
+                <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/70 md:text-lg">
+                    Fale com a Vitória Gomes agora e receba uma análise inicial para carro, imóvel ou investimento.
+                </p>
+
+                <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20estruturar%20meu%20plano%20de%20cons%C3%B3rcio."
+                    class="mt-9 inline-flex rounded-full bg-gold px-8 py-4 text-base font-extrabold text-black shadow-glow transition hover:-translate-y-0.5 hover:bg-goldsoft">
+                    Falar com especialista no WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-blackpremium py-10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+            <div>
+                <div class="flex items-center gap-3"> <span
+                        class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-sm font-bold text-gold">VG</span>
+                    <span class="font-semibold text-white">VG Soluções Financeiras</span>
+                </div>
+                <p class="mt-3 max-w-md text-sm leading-6 text-white/50"> Consultoria em consórcio estruturado para
+                    veículos, imóveis e investimento patrimonial. </p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-white/55 md:items-end">
+                <a href="https://wa.me/5500000000000"
+                    class="font-semibold text-gold transition hover:text-goldsoft">WhatsApp: (00) 00000-0000</a>
+                <p>© 2026 VG Soluções Financeiras. Todos os direitos reservados.</p>
+            </div>
         </div>
-      </div>
-    </section>
+    </footer>
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20uma%20simula%C3%A7%C3%A3o%20de%20cons%C3%B3rcio."
+        class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-black text-black shadow-glow transition hover:scale-105 hover:bg-goldsoft"
+        aria-label="Falar no WhatsApp">
+        ✆
+    </a>
 
-    <section id="servicos" class="bg-[#0d0d0d] py-20 sm:py-24">
-      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-        <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div class="max-w-3xl">
-            <p class="text-sm font-bold uppercase tracking-[0.22em] text-champagne">Soluções</p>
-            <h2 class="mt-4 text-3xl font-extrabold leading-tight text-stone-50 sm:text-5xl">
-              Planos estruturados para o que você quer conquistar.
-            </h2>
-          </div>
-          <a href="#" data-whatsapp-link data-source="Serviços" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-gold/40 px-5 py-3 text-sm font-bold text-champagne transition hover:-translate-y-0.5 hover:bg-gold hover:text-black">
-            <i data-lucide="message-circle" class="h-4 w-4"></i>
-            Simular agora
-          </a>
-        </div>
-
-        <div class="mt-10 grid gap-5 md:grid-cols-3">
-          <article class="reveal group overflow-hidden rounded-sm border border-white/10 bg-black shadow-deep">
-            <div class="relative h-64 overflow-hidden">
-              <img src="assets/service-vehicles.png" alt="Consórcio para veículos" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
-            </div>
-            <div class="p-6">
-              <div class="flex h-11 w-11 items-center justify-center rounded-sm bg-gold/20 text-champagne">
-                <i data-lucide="car-front" class="h-6 w-6"></i>
-              </div>
-              <h3 class="mt-5 text-2xl font-extrabold text-stone-50">Veículos</h3>
-              <p class="mt-3 leading-7 text-stone-400">Planeje a troca ou compra do seu carro com parcelas mais inteligentes e acompanhamento consultivo.</p>
-            </div>
-          </article>
-
-          <article class="reveal group overflow-hidden rounded-sm border border-white/10 bg-black shadow-deep">
-            <div class="relative h-64 overflow-hidden">
-              <img src="assets/service-real-estate.png" alt="Consórcio para imóveis" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
-            </div>
-            <div class="p-6">
-              <div class="flex h-11 w-11 items-center justify-center rounded-sm bg-gold/20 text-champagne">
-                <i data-lucide="home" class="h-6 w-6"></i>
-              </div>
-              <h3 class="mt-5 text-2xl font-extrabold text-stone-50">Imóveis</h3>
-              <p class="mt-3 leading-7 text-stone-400">Uma alternativa planejada para sair do aluguel, comprar melhor ou construir patrimônio familiar.</p>
-            </div>
-          </article>
-
-          <article class="reveal group overflow-hidden rounded-sm border border-white/10 bg-black shadow-deep">
-            <div class="relative h-64 overflow-hidden">
-              <img src="assets/service-investments.png" alt="Consórcio para investimentos" class="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent"></div>
-            </div>
-            <div class="p-6">
-              <div class="flex h-11 w-11 items-center justify-center rounded-sm bg-gold/20 text-champagne">
-                <i data-lucide="trending-up" class="h-6 w-6"></i>
-              </div>
-              <h3 class="mt-5 text-2xl font-extrabold text-stone-50">Investimentos</h3>
-              <p class="mt-3 leading-7 text-stone-400">Use o consórcio como ferramenta estratégica para aquisição de ativos e organização patrimonial.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-20 sm:py-24">
-      <div class="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
-        <div class="reveal">
-          <p class="text-sm font-bold uppercase tracking-[0.22em] text-champagne">Diferenciais</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight text-stone-50 sm:text-5xl">
-            Você não recebe uma tabela. Recebe direção.
-          </h2>
-          <p class="mt-5 leading-8 text-stone-400">
-            A consultoria existe para simplificar uma decisão importante e evitar escolhas que não combinam com o seu momento financeiro.
-          </p>
-        </div>
-
-        <div class="grid gap-4 md:grid-cols-3">
-          <div class="reveal soft-card rounded-sm p-6">
-            <i data-lucide="messages-square" class="h-8 w-8 text-champagne"></i>
-            <h3 class="mt-5 text-xl font-extrabold text-stone-50">Atendimento consultivo</h3>
-            <p class="mt-3 leading-7 text-stone-400">Conversa clara, diagnóstico financeiro e orientação sem pressão.</p>
-          </div>
-          <div class="reveal soft-card rounded-sm p-6">
-            <i data-lucide="route" class="h-8 w-8 text-champagne"></i>
-            <h3 class="mt-5 text-xl font-extrabold text-stone-50">Estratégia personalizada</h3>
-            <p class="mt-3 leading-7 text-stone-400">Plano ajustado ao seu objetivo, prazo e capacidade de pagamento.</p>
-          </div>
-          <div class="reveal soft-card rounded-sm p-6">
-            <i data-lucide="badge-check" class="h-8 w-8 text-champagne"></i>
-            <h3 class="mt-5 text-xl font-extrabold text-stone-50">Acompanhamento completo</h3>
-            <p class="mt-3 leading-7 text-stone-400">Suporte antes, durante e depois da contratação da cota.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="relative overflow-hidden border-y border-gold/20 bg-[#0d0d0d] py-20 sm:py-24">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(201,162,74,0.18),transparent_34rem)]"></div>
-      <div class="relative mx-auto max-w-5xl px-5 text-center sm:px-8 lg:px-10">
-        <div class="reveal">
-          <p class="text-sm font-bold uppercase tracking-[0.22em] text-champagne">Próximo passo</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight text-stone-50 sm:text-5xl">
-            Vamos estruturar seu consórcio com estratégia?
-          </h2>
-          <p class="mx-auto mt-5 max-w-2xl leading-8 text-stone-400">
-            Clique no WhatsApp e receba uma orientação inicial para entender o melhor caminho para seu objetivo.
-          </p>
-          <a href="#" data-whatsapp-link data-source="CTA final" class="button-shine gold-gradient mt-9 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-sm px-7 py-4 text-base font-extrabold text-black shadow-gold transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-black sm:w-auto">
-            <i data-lucide="message-circle" class="h-5 w-5"></i>
-            Falar com especialista no WhatsApp
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-blacksoft py-8">
-    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 text-sm text-stone-500 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-10">
-      <div>
-        <p class="font-bold text-stone-200">VG Soluções Financeiras</p>
-        <p class="mt-1">Consultoria pessoal em consórcio estruturado</p>
-      </div>
-      <p>Desenvolvido por Avus Digital</p>
-    </div>
-  </footer>
-
-  <a href="#" data-whatsapp-link data-source="Botão flutuante" aria-label="Falar com especialista no WhatsApp" class="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-black shadow-[0_18px_45px_rgba(37,211,102,0.32)] transition hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 focus:ring-offset-black">
-    <i data-lucide="message-circle" class="h-7 w-7"></i>
-  </a>
-
-  <script>
-    const whatsappNumber = "5500000000000";
-    const baseMessage = "Olá, VG Soluções Financeiras. Quero falar com a especialista sobre consórcio estruturado.";
-
-    function buildWhatsAppUrl(source) {
-      const message = `${baseMessage}\n\nMeu objetivo é entender o melhor plano para carro, imóvel ou investimento.\nOrigem: ${source}`;
-      return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-    }
-
-    document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
-      const source = link.getAttribute("data-source") || "Landing page";
-      link.href = buildWhatsAppUrl(source);
-      link.target = "_blank";
-      link.rel = "noopener";
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.16 });
-
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
-
-    if (window.lucide) {
-      lucide.createIcons();
-    }
-  </script>
 </body>
+
 </html>
