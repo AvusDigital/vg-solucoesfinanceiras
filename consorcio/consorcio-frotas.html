@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VG Soluções Financeiras | Consorcio de Frotas</title>
+    <meta name="description"
+        content="Vitória Gomes, especialista em consórcio estruturado para veículos, imóveis e investimento patrimonial." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { colors: { blackpremium: '#0a0a0a', gold: '#C9A24A', goldsoft: '#E3C76A' }, fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }, boxShadow: { glow: '0 0 80px rgba(201, 162, 74, 0.24)', premium: '0 24px 80px rgba(0, 0, 0, 0.45)' } } } }; </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-blackpremium text-white antialiased selection:bg-gold selection:text-neutral-50">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-blackpremium/85 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+            <a href="https://wa.me/5511990048472?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20entender%20qual%20cons%C3%B3rcio%20faz%20sentido%20para%20meu%20objetivo."
+                target="_blank" class="flex items-center gap-3">
+                <img src="assets/images/logo.png" alt="VG Soluções Financeiras" class="h-10 w-auto object-contain">
+                <p class="text-sm font-semibold tracking-wide text-white">(11) 99004-8472</p>
+            </a>
+
+            <nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex">
+                <!-- SOBRE -->
+                <a href="sobre.html" class="transition hover:text-gold">Sobre a VG</a>
+
+                <!-- CONSÓRCIOS -->
+                <div class="group relative">
+                    <button class="flex items-center gap-2 transition hover:text-gold">Consórcios</button>
+                    <div
+                        class="absolute left-0 top-full hidden min-w-[240px] rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl group-hover:block">
+                        <a href="consorcio/consorcio-imob.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio
+                            Imobiliário</a>
+                        <a href="consorcio/consorcio-veic.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de
+                            Veículos</a>
+                        <a href="consorcio/consorcio-frotas.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de
+                            Frotas</a>
+                        <a href="consorcio/consorcio-serv.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de
+                            Serviços</a>
+                    </div>
+                </div>
+
+                <!-- INVESTIMENTO -->
+                <div class="group relative">
+                    <button class="flex items-center gap-2 transition hover:text-gold">Investimento</button>
+                    <div
+                        class="absolute left-0 top-full hidden min-w-[260px] rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl group-hover:block">
+                        <a href="investimento/invest-imovel.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Compra de
+                            imóvel no exterior</a>
+                        <a href="investimento/invest-const.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Construção</a>
+                        <a href="investimento/invest-patri.html"
+                            class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Alavancagem
+                            patrimonial</a>
+                    </div>
+                </div>
+
+                <!-- CONTATO -->
+                <a href="contato.html" class="transition hover:text-gold">Contato</a>
+            </nav>
+
+            <div class="hidden items-center gap-3 md:flex">
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/vgsolucoesfinanceirass/" target="_blank"
+                    class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-gold/50 hover:bg-gold hover:text-neutral-50">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                        stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M7.5 3h9A4.5 4.5 0 0121 7.5v9a4.5 4.5 0 01-4.5 4.5h-9A4.5 4.5 0 013 16.5v-9A4.5 4.5 0 017.5 3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 11.25a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75h.008v.008h-.008V6.75z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="pt-44 pb-24">
+
+        <div class="mx-auto max-w-7xl px-6">
+
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+                VG Soluções Financeiras
+            </p>
+
+            <h1 class="mt-6 max-w-4xl text-5xl font-bold leading-[1.1] text-neutral-50 md:text-7xl">
+                Consórcio de Frotas
+            </h1>
+
+            <p class="mt-8 max-w-3xl text-lg leading-8 text-neutral-50/65">
+                Expanda sua operação com planejamento, economia e liberdade financeira.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- TEXO -->
+    <section class="pb-24">
+
+        <div class="mx-auto max-w-5xl px-6">
+
+            <div class="rounded-[2rem] border border-black/5 bg-[#FAFAFA] p-8 shadow-sm md:p-14">
+
+                <h2 class="text-3xl font-bold leading-[1.1] text-zinc-900 md:text-4xl">
+                    O que é Consórcio de Frotas?
+                </h2>
+
+                <div class="mt-10 space-y-8 text-lg leading-9 text-zinc-900/70">
+
+                    <p>
+                        O consórcio de frotas é uma modalidade inteligente para empresas que desejam renovar, ampliar ou
+                        modernizar seus veículos sem depender de financiamentos tradicionais.
+                    </p>
+
+                    <p>
+                        Funciona como uma compra programada coletiva, onde os participantes contribuem mensalmente para
+                        formar um fundo comum destinado à aquisição de veículos ou máquinas.
+                    </p>
+
+                    <p>
+                        Cada empresa participante possui uma carta de crédito definida em contrato e pode ser
+                        contemplada por sorteio ou lance durante o período do consórcio.
+                    </p>
+
+                    <p>
+                        Mesmo após a contemplação, o consorciado continua pagando as parcelas normalmente até o
+                        encerramento do grupo, garantindo equilíbrio financeiro para todos os participantes.
+                    </p>
+
+                    <p>
+                        Essa modalidade vem se tornando cada vez mais popular entre empresas que desejam crescer de
+                        forma estratégica e sustentável, evitando juros elevados e preservando o capital de giro.
+                    </p>
+
+                    <p>
+                        O consórcio de frotas é ideal para negócios que possuem visão de longo prazo e desejam
+                        estruturar investimentos com maior previsibilidade financeira.
+                    </p>
+
+                    <p>
+                        Com planejamento adequado, é possível renovar veículos periodicamente, aumentar produtividade
+                        operacional e reduzir custos sem comprometer o caixa da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BANNER -->
+    <section class="pb-24">
+
+        <div class="mx-auto max-w-7xl px-6">
+
+            <div class="relative overflow-hidden rounded-[2.5rem]">
+
+                <!-- IMAGEM -->
+                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=2000&auto=format&fit=crop"
+                    class="absolute inset-0 h-full w-full object-cover">
+
+                <!-- OVERLAY -->
+                <div class="absolute inset-0 bg-black/75"></div>
+
+                <!-- CONTEÚDO -->
+                <div class="relative z-10 px-8 py-20 md:px-16 md:py-28">
+
+                    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+                        Crescimento estratégico
+                    </p>
+
+                    <h2 class="mt-6 max-w-4xl text-4xl font-bold leading-[1.1] text-white md:text-6xl">
+                        Expanda sua frota sem comprometer o caixa da empresa
+                    </h2>
+
+                    <p class="mt-8 max-w-3xl text-lg leading-8 text-white/75">
+                        Planejamento inteligente para adquirir veículos com mais economia, previsibilidade e
+                        flexibilidade financeira.
+                    </p>
+
+                    <a href="#"
+                        class="mt-10 inline-flex rounded-full bg-gold px-8 py-4 text-sm font-bold text-neutral-50 transition hover:bg-goldsoft">
+
+                        Quero entender melhor
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="pb-28">
+
+        <div class="mx-auto max-w-7xl px-6">
+
+            <!-- TÍTULO -->
+            <div class="max-w-3xl">
+
+                <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gold">
+                    Benefícios
+                </p>
+
+                <h2 class="mt-5 text-4xl font-bold leading-[1.1] text-neutral-50 md:text-5xl">
+                    Por que escolher o Consórcio de Frotas?
+                </h2>
+
+                <p class="mt-6 text-lg leading-8 text-neutral-50/65">
+                    Resultados consistentes com menos custos e mais estratégia.
+                </p>
+
+            </div>
+
+            <!-- GRID -->
+            <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        01
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Expansão planejada
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Adquira novos veículos ou máquinas de forma escalonada sem comprometer o capital de giro.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-[#FAFAFA] p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        02
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Zero juros
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Evite os altos custos do financiamento e reinvista recursos em outras áreas da empresa.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        03
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Entrada zero
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Comece sua participação sem necessidade de entrada, facilitando o planejamento financeiro.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-[#FAFAFA] p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        04
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Flexibilidade de escolha
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Utilize sua carta de crédito para qualquer marca, modelo ou fornecedor.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        05
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Lances estratégicos
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Aproveite sobras de caixa para ofertar lances e antecipar a aquisição dos bens.
+                    </p>
+
+                </div>
+
+                <!-- CARD -->
+                <div
+                    class="rounded-[2rem] border border-black/5 bg-[#FAFAFA] p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+
+                    <span class="text-5xl font-bold text-gold/20">
+                        06
+                    </span>
+
+                    <h3 class="mt-6 text-2xl font-semibold text-zinc-900">
+                        Contemplação programada
+                    </h3>
+
+                    <p class="mt-4 leading-8 text-zinc-900/65">
+                        Participe de múltiplos grupos e receba créditos em diferentes momentos conforme o planejamento
+                        da empresa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="bg-blackpremium py-10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+            <div>
+                <div class="flex items-center gap-3"> <span
+                        class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-sm font-bold text-gold">VG</span>
+                    <span class="font-semibold text-white">VG Soluções Financeiras</span>
+                </div>
+                <p class="mt-3 max-w-md text-sm leading-6 text-white/50"> Consultoria em consórcio estruturado para
+                    eículos, imóveis e investimento patrimonial. </p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-white/55 md:items-end">
+                <a href="https://wa.me/5500000000000"
+                    class="font-semibold text-gold transition hover:text-goldsoft">WhatsApp: (00) 00000-0000</a>
+                <p>© 2026 VG Soluções Financeiras. Todos os direitos reservados.</p>
+            </div>
+        </div>
+
+    </footer>
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20uma%20simula%C3%A7%C3%A3o%20de%20cons%C3%B3rcio."
+        class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-black text-neutral-50 shadow-glow transition hover:scale-105 hover:bg-goldsoft"
+        aria-label="Falar no WhatsApp">
+        ✆
+    </a>
+
+</body>
+</html>
