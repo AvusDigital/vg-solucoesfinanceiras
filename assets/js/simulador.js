@@ -352,3 +352,23 @@ function ativarVeiculo() {
     imovelText.classList.add("text-zinc-900/60");
 
 }
+
+// ===========
+// MENU MOBILE
+// ===========
+
+const menuBtn = document.getElementById("menu-btn");
+const closeMenu = document.getElementById("close-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuBtn.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+});
+
+closeMenu.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("flex");
+    mobileMenu.classList.add("hidden");
+});
