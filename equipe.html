@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VG Soluções Financeiras | Nossa Equipe</title>
+    <meta name="description" content="Vitória Gomes, especialista em consórcio estruturado para veículos, imóveis e investimento patrimonial." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { colors: { blackpremium: '#0a0a0a', gold: '#C9A24A', goldsoft: '#E3C76A' }, fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }, boxShadow: { glow: '0 0 80px rgba(201, 162, 74, 0.24)', premium: '0 24px 80px rgba(0, 0, 0, 0.45)' } } } }; </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-blackpremium text-white antialiased selection:bg-gold selection:text-neutral-50">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-blackpremium/85 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+            <a href="https://wa.me/5511990048472?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20entender%20qual%20cons%C3%B3rcio%20faz%20sentido%20para%20meu%20objetivo."
+                target="_blank" class="flex items-center gap-3">
+                <img src="assets/images/logo.png" alt="VG Soluções Financeiras" class="h-10 w-auto object-contain">
+                <p class="text-sm font-semibold tracking-wide text-white">(11) 99004-8472</p>
+            </a>
+
+            <nav class="hidden items-center gap-8 text-sm text-white/70 lg:flex">
+
+                <!-- SOBRE -->
+                <a href="/sobre.html" class="transition hover:text-gold">Sobre a VG</a>
+
+                <!-- CONSÓRCIOS -->
+                <div class="group relative">
+                    <button class="flex items-center gap-2 transition hover:text-gold">Consórcios</button>
+                    <div
+                        class="absolute left-0 top-full hidden min-w-[240px] rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl group-hover:block">
+                        <a href="/consorcio/consorcio-imob.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio Imobiliário</a>
+                        <a href="/consorcio/consorcio-veic.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de Veículos</a>
+                        <a href="/consorcio/consorcio-frotas.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de Frotas</a>
+                        <a href="/consorcio/consorcio-serv.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Consórcio de Serviços</a>
+                    </div>
+                </div>
+
+                <!-- INVESTIMENTO -->
+                <div class="group relative">
+                    <button class="flex items-center gap-2 transition hover:text-gold">Investimento</button>
+                    <div class="absolute left-0 top-full hidden min-w-[260px] rounded-2xl border border-white/10 bg-black/95 p-3 shadow-2xl group-hover:block">
+                        <a href="/investimento/invest-imovel.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Compra de imóvel no exterior</a>
+                        <a href="/investimento/invest-const.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Construção</a>
+                        <a href="/investimento/invest-patri.html" class="block rounded-xl px-4 py-3 transition hover:bg-white/5 hover:text-gold">Alavancagem Patrimonial</a>
+                    </div>
+                </div>
+
+                <!-- CONTATO -->
+                <a href="/contato.html" class="transition hover:text-gold">Contato</a>
+
+                <!-- EQUIPE -->
+                <a href="/equipe.html">Nossa Equipe</a>
+            </nav>
+
+            <div class="hidden items-center gap-3 md:flex">
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/vgsolucoesfinanceirass/" target="_blank" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:border-gold/50 hover:bg-gold hover:text-neutral-50">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="h-5 w-5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3h9A4.5 4.5 0 0121 7.5v9a4.5 4.5 0 01-4.5 4.5h-9A4.5 4.5 0 013 16.5v-9A4.5 4.5 0 017.5 3z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 11.25a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75h.008v.008h-.008V6.75z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- BOTAO MENU MOBILE -->
+        <button 
+            id="menu-btn"
+            type="button" 
+            class="flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-3 text-white backdrop-blur transition hover:border-gold/40 hover:bg-gold hover:text-black md:hidden">
+
+            <svg 
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+
+                <path 
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="fixed inset-0 z-[999] hidden overflow-y-auto bg-black/95 px-8 py-32 backdrop-blur-xl">
+
+        <!-- FECHAR -->
+        <button
+            id="close-menu"
+            type="button"
+            class="absolute right-6 top-6 text-white">
+
+        <svg 
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8" fill="none" viewBox="0 0 24 24" 
+            stroke="currentColor">
+
+            <path 
+                stroke-linecap="round" 
+                stroke-linejoin="round" 
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- LINKS -->
+    <nav class="flex flex-col gap-10">
+
+        <!-- SOBRE -->
+        <a href="/sobre.html" class="text-3xl font-semibold text-white transition hover:text-gold">Sobre a VG</a>
+
+        <!-- CONSÓRCIOS -->
+        <div class="space-y-4">
+            <p class="text-sm uppercase tracking-[0.3em] text-white/40">Consórcios</p>
+
+            <div class="flex flex-col gap-4 pl-2">
+                <a href="/consorcio/consorcio-imob.html" class="text-2xl text-white transition hover:text-gold">Consórcio ImobiliáriO</a>
+
+                <a href="/consorcio/consorcio-veic.html" class="text-2xl text-white transition hover:text-gold">Consórcio de Veículos</a>
+
+                <a href="/consorcio/consorcio-frotas.html" class="text-2xl text-white transition hover:text-gold">Consórcio de Frotas</a>
+
+                <a href="/consorcio/consorcio-serv.html" class="text-2xl text-white transition hover:text-gold">Consórcio de Serviços</a>
+            </div>
+        </div>
+
+        <!-- INVESTIMENTOS -->
+        <div class="space-y-4">
+            <p class="text-sm uppercase tracking-[0.3em] text-white/40">Investimentos</p>
+
+            <div class="flex flex-col gap-4 pl-2">
+                <a href="/investimento/invest-imovel.html" class="text-2xl text-white transition hover:text-gold">Imóvel no Exterior</a>
+
+                <a href="/investimento/invest-const.html" class="text-2xl text-white transition hover:text-gold">Construção</a>
+
+                <a href="/investimento/invest-patri.html" class="text-2xl text-white transition hover:text-gold">Alavancagem Patrimonial</a>
+            </div>
+        </div>
+
+        <!-- CONTATO -->
+        <a href="/contato.html" class="text-3xl font-semibold text-white transition hover:text-gold">Contato</a>
+
+        <!-- INÍCIO -->
+        <a href="/index.html" class="text-3xl font-semibold text-white transition hover:text-gold">Voltar para o início</a>
+        </nav>
+    </div>
+
+    <!-- TIME VG Soluções -->
+    <section class="relative overflow-hidden bg-[#0B0B0B] py-28">
+
+        <div class="mx-auto max-w-7xl px-6 lg:px-12">
+
+            <!-- TITULO -->
+            <div class="mx-auto mb-20 max-w-3xl text-center">
+
+                <span class="text-sm font-semibold uppercase tracking-[0.35em] text-gold/70">Especialistas</span>
+
+                <h2 class="mt-6 text-4xl font-bold text-white md:text-5xl">Conheça o time VG Soluções</h2>
+
+                <p class="mt-6 text-lg leading-8 text-white/60"> Um time preparado para entregar atendimento personalizado, estratégia financeira e acompanhamento completo em cada etapa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- CARD 1-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-1"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 1</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Consultora Financeira</p>
+                </div>
+
+                <!-- CARD 2-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-2"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 2</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Especialista em Investimentos</p>
+                </div>
+
+                <!-- CARD 3-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-3"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 3</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Atendimento Premium</p>
+                </div>
+
+                <!-- CARD 4-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-4"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 4</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Estratégia Patrimonial</p>
+                </div>
+
+                <!-- VICTORIA -->
+                <div class="relative overflow-hidden rounded-[2rem] border border-gold/20 bg-gradient-to-b from-black via-[#2A2112] to-[#C9A24A] p-10 shadow-[0_0_80px_rgba(201,162,74,0.15)]">
+
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_60%)]">
+                    </div>
+
+                    <div class="relative z-10">
+
+                        <img 
+                            src="assets/images/victoria.png"
+                            alt="Victoria Gomes"
+                            class="h-28 w-28 rounded-full border border-white/10 object-cover">
+
+                        <span class="mt-8 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">Fundadora</span>
+
+                        <h3 class="mt-6 text-3xl font-bold text-white">Victoria Gomes</h3>
+
+                        <p class="mt-4 leading-8 text-white/75">Especialista em consórcios, investimentos e planejamento patrimonial estratégico.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 5-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1504593811423-6dd665756598?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-5"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 5</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Consultora de Crédito</p>
+                </div>
+
+                <!-- CARD 6-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-6"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 6</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Especialista Comercial</p>
+                </div>
+
+                <!-- CARD 7-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-7"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 7</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Relacionamento com Clientes</p>
+                </div>
+
+                <!-- CARD 8-->
+                <div class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition duration-300 hover:-translate-y-2 hover:border-gold/30 hover:bg-white/[0.05]">
+
+                    <img 
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop"
+                        alt="Funcionario-8"
+                        class="h-24 w-24 rounded-full object-cover">
+
+                    <h3 class="mt-6 text-2xl font-semibold text-white">Funcionario 8</h3>
+
+                    <p class="mt-2 text-sm uppercase tracking-[0.25em] text-gold/70">Consultor Patrimonial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blackpremium py-10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-8 px-5 md:flex-row md:items-center md:justify-between md:px-8">
+            <div>
+                <div class="flex items-center gap-3">
+                    <span class="flex h-10 w-10 items-center justify-center rounded-full border border-gold/40 bg-gold/10 text-sm font-bold text-gold">VG</span>
+                    <span class="font-semibold text-white">VG Soluções Financeiras</span>
+                </div>
+                <p class="mt-3 max-w-md text-sm leading-6 text-white/50"> Consultoria em consórcio estruturado para veículos, imóveis e investimento patrimonial.</p>
+            </div>
+            <div class="flex flex-col gap-3 text-sm text-white/55 md:items-end">
+                <a href="https://wa.me/5511990048472?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20entender%20qual%20cons%C3%B3rcio%20faz%20sentido%20para%20meu%20objetivo." class="font-semibold text-gold transition hover:text-goldsoft">WhatsApp: (11) 99004-8472</a>
+                <p>© 2026 VG Soluções Financeiras. Todos os direitos reservados.</p>
+                <p>Desenvolvido por: <a href="https://portfolio-avusdigital.vercel.app/">Avus Digital</a></p>
+            </div>
+        </div>
+        <a href="https://wa.me/5511990048472?text=Ol%C3%A1%2C%20Vit%C3%B3ria.%20Quero%20entender%20qual%20cons%C3%B3rcio%20faz%20sentido%20para%20meu%20objetivo." class="fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-black text-neutral-50 shadow-glow transition hover:scale-105 hover:bg-goldsoft" aria-label="Falar no WhatsApp">✆</a>
+    </footer>
+
+</body>
+</html>
